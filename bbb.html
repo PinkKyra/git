@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Type Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #6a5acd;
+            font-size: 2.5em;
+            margin-top: 50px;
+        }
+
+        .container {
+            margin-top: 50px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .question {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #6a5acd;
+            color: white;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #483d8b;
+        }
+
+        #result {
+            font-size: 1.5em;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #6a5acd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Find Your Hair Type!</h1>
+
+    <div class="container">
+        <p class="question">How would you describe your hair texture?</p>
+        <select id="texture">
+            <option value="straight">Straight</option>
+            <option value="wavy">Wavy</option>
+            <option value="curly">Curly</option>
+            <option value="kinky">Kinky</option>
+        </select>
+
+        <p class="question">How thick is your hair
