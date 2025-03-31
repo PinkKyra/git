@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Code Page</title>
+    <style>
+        body {
+            background-color: #ffebf0;
+            color: #ff77a9;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff6f61;
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+
+        .heart {
+            color: #ff4499;
+            font-size: 2em;
+        }
+
+        button {
+            background-color: #ff4499;
+            color: white;
+            font-size: 1.2em;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff1e75;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Cute Page!</h1>
+    <p>Here's a little surprise for you! 💖</p>
+    <button onclick="showHeart()">Click me for love 💕</button>
+    <p id="loveMessage" class="heart" style="display:none;">💖💖 You're awesome! 💖💖</p>
+
+    <script>
+        function showHeart() {
+            document.getElementById('loveMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
