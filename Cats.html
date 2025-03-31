@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Cat Suits You Best?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+    .quiz-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+    }
+    .question {
+      font-size: 18px;
+      margin: 20px 0;
+    }
+    .options {
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .result {
+      font-size: 20px;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #ff6347;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quiz-container">
+    <h1>Find Out Which Cat Suits You Best!</h1>
+
+    <div id="question1" class="question">
+      <p>What is your ideal weekend activity?</p>
+      <div class="options">
+        <input type="radio" name="q1" value="active"> Hiking or running<br>
+        <input type="radio" name="q1" value="calm"> Reading or relaxing<br>
+        <input type="radio" name="q1" value="playful"> Playing games or socializing<br>
+      </div>
+    </div>
+
+    <div id="question2" class="question">
+      <p>How do you like to spend your day?</p>
+      <div class="options">
+        <input type="radio" name="q2" value="adventurous"> Exploring and being active<br>
+        <input type="radio" name="q2" value="peaceful"> Staying at home, enjoying peace<br>
+        <input type="radio" name="q2" value="curious"> Discovering new things or people<br>
+      </div>
+    </div>
+
+    <div id="question3" class="question">
+      <p>How do you like your pets to be?</p>
+      <div class="options">
+        <input type="radio" name="q3" value="independent"> Independent and low-maintenance<br>
+        <input type="radio" name="q3" value="affectionate"> Loving and cuddly<br>
+        <input type="radio" name="q3" value="playful"> Energetic and always ready to play<br>
+      </div>
+    </div>
+
+    <button onclick="getResult()">Submit</button>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    function getResult() {
+      // Get values from the quiz
+      var q1 = document.querySelector('input[name="q1"]:checked');
+      var q2 = document.querySelector('input[name="q2"]:checked');
+      var q3 = document.querySelector('input[name="q3"]:checked');
+      
+      if (!q1 || !q2 || !q3) {
+        alert("Please answer all questions!");
+        return;
+      }
+
+      // Determine which cat suits best based on answers
+      var result = "";
+
+      if (q1.value === "active" && q2.value === "adventurous" && q3.value === "independent") {
+        result = "A sleek and energetic Bengal cat!";
+      } else if (q1.value === "calm" && q2.value === "peaceful" && q3.value === "affectionate") {
+        result = "A friendly and relaxed Ragdoll cat!";
+      } else if (q1.value === "playful" && q2.value === "curious" && q3.value === "playful") {
+        result = "A fun and curious Siamese cat!";
+      } else {
+        result = "You’re a perfect match for a mixed breed cat!";
+      }
+
+      // Show result
+      document.getElementById("result").innerText = "Your perfect cat is: " + result;
+    }
+  </script>
+
+</body>
+</html>
